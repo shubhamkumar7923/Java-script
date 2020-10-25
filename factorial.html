@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function show(){
+
+var i, num, fact;
+fact=1;
+num=Number(document.getElementById("num").value);
+for(i=1; i<=num; i++)  
+{
+fact= fact*i;
+}  
+document.getElementById("Answer").value= fact;
+}
+</script>
+</head>
+<body>
+Enter Number: <input id="num" ><br>
+<button onclick="show()">Factorial</button>
+<input id="Answer">
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script >
+        function show(){
+            var age;
+         age=Number(document.getElementById("num").value);
+            if(age>18){
+             window.alert("You can vote");
+            }else{
+             window.alert("You cannot vote");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    Enter Age: <input id="num" ><br>
+    <button onclick="show()">Submit</button>
+</body>
+</html>

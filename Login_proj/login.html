@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <script type="text/javascript">  
+    function valid_form(){  
+    var uname = document.my_form.name.value;
+    var pwd= document.my_form.pass.value;
+    if(uname ==""){
+    window.alert("Enter Username.");
+    document.my_form.name.focus();
+    return false;
+    }
+    if ((uname .length < 3) || (uname .length > 10)){
+    window.alert("Character must be between 3 to 10");
+    document.my_form.name.select();
+    return false;
+    }
+    if(pwd==""){
+      window.alert("Enter Password.");	
+       document.my_form.pass.focus();
+        return false;
+    }
+    if(pwd){
+     //var filter1 = /[a-zA-Z]/g;
+    var filter2 = /[@$,<>#:?_*&;]/g;
+    var filter3 = /[0-9]/g;          
+     if  ( pwd.match(filter2)  && pwd.match(filter3) ){
+     window.alert("Valid Password");
+     }  else{
+            window.alert("Invalid Password");
+            }
+        }
+    }
+     </script>  
+    <div class="container">
+        <h1 class="label">User Login</h1>
+        <form class="login_form" name="my_form" onsubmit="return valid_form()" >
+            <div class="font">Username</div>
+            <input type="text" name="name">
+            <div class="font2">Password</div>
+            <input type="password" name="pass">
+            <button type="submit" value="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
